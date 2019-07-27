@@ -93,6 +93,7 @@ renderQuiz() {
   renderResult() {
     return (
       <Result quizResult={this.state.result} />
+      // will this have to become fetch requests, post answers for user & get results
     );
   }
   render() {

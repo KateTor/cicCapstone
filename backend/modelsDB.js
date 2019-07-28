@@ -9,8 +9,9 @@ const Dog = db.define('dog', {
   size: { type: Sequelize.STRING, allowNull: false },
   breed: { type: Sequelize.STRING, allowNull: false },
   description: { tye: Sequelize.STRING, allowNull: false },
-  picture: { type: Sequelize.IMAGE, allowNull: false },
-  shelter_id: {type: Sequelize.STRING, allowNull: false}
+  picture: { type: Sequelize.BLOB, allowNull: false },
+  shelter_id: {type: Sequelize.STRING, allowNull: false},
+  dogType: {type: Sequelize.String, allowNull: false}
 });
 
 const Trait = db.define('trait', {

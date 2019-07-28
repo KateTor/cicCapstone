@@ -26,7 +26,12 @@ class App extends React.Component {
   componentDidMount() {
     this.setState( { question: quizQuestions[0].question,
     answerOptions: quizQuestions[0].answers });
+    //fetch api call for quiz questions
   };
+
+  componentDidUpdate() {
+    //was this supposed to be for results?
+  }
 
   setUserAnswer(answer) {
     // const updatedAnswersCount = update(this.state.answersCount, {
@@ -76,6 +81,7 @@ class App extends React.Component {
     } else {
       this.setState({ result: 'Undetermined' });
     }
+    //fetch for a/b/c group
   }
 
 renderQuiz() {

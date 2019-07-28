@@ -1,58 +1,36 @@
 import React from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-export default class Example extends React.Component {
+class SignUp extends React.Component {
   render() {
-    return (
+    return(
       <Form>
-        <Row form>
-          <Col md={6}>
-            <FormGroup>
-              <Label for="exampleEmail">Email</Label>
-              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-            </FormGroup>
-          </Col>
-          <Col md={6}>
-            <FormGroup>
-              <Label for="examplePassword">Password</Label>
-              <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-            </FormGroup>
-          </Col>
-        </Row>
         <FormGroup>
-          <Label for="exampleAddress">Address</Label>
-          <Input type="text" name="address" id="exampleAddress" placeholder="1234 Main St"/>
+          <Label for="firstName" hidden>First Name</Label>
+          <Input type="firstName" name="firstName" id="firstName" placeholder="First Name"></Input>
         </FormGroup>
         <FormGroup>
-          <Label for="exampleAddress2">Address 2</Label>
-          <Input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor"/>
+          <Label for="lastName" hidden>Last Name</Label>
+          <Input type="lastName" name="lastName" id="lastName" placeholder="Last Name"></Input>
         </FormGroup>
-        <Row form>
-          <Col md={6}>
-            <FormGroup>
-              <Label for="exampleCity">City</Label>
-              <Input type="text" name="city" id="exampleCity"/>
-            </FormGroup>
-          </Col>
-          <Col md={4}>
-            <FormGroup>
-              <Label for="exampleState">State</Label>
-              <Input type="text" name="state" id="exampleState"/>
-            </FormGroup>
-          </Col>
-          <Col md={2}>
-            <FormGroup>
-              <Label for="exampleZip">Zip</Label>
-              <Input type="text" name="zip" id="exampleZip"/>
-            </FormGroup>  
-          </Col>
-        </Row>
+        <FormGroup>
+          <Label for="email" hidden>Email</Label>
+          <Input type="email" name="email" id="email" placeholder="Email"></Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="password" hidden>Create Password</Label>
+          <Input type="password" name="password" id="password" placeholder="Create Password"></Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="confirmPassword" hidden>Confirm Password</Label>
+          <Input type="confirmPassword" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"></Input>
+        </FormGroup>
         <FormGroup check>
-          <Input type="checkbox" name="check" id="exampleCheck"/>
-          <Label for="exampleCheck" check>I'd like to receive email updates when a pet matching my personality becomes available.</Label>
+          <Label check>
+            <Input type="checkbox" /> I want to receive updates when a dog becomes available that matches my results.
+          </Label>
         </FormGroup>
-        <Button>Sign Up</Button>
       </Form>
-    );
+    )
   }
 }

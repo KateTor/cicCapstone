@@ -4,6 +4,7 @@ import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 
+//sets initial state
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,20 +24,27 @@ class App extends React.Component {
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
+//loads questions
   componentDidMount() {
     this.setState( { question: quizQuestions[0].question,
     answerOptions: quizQuestions[0].answers });
+
     //fetch api call for quiz questions
+    // fetch("/quizQuestions", {
+    //   method: "GET"
+    // }).then(rawJSON => {
+    //   return rawJSON.json();
+    // }).then(data => {
+    //   this.setState({ question: quizQuestions[0].question })
+    // })
   };
 
   componentDidUpdate() {
-    //was this supposed to be for results?
+    //api call for results?
   }
 
+//uses Update to change answer values based on user's choice
   setUserAnswer(answer) {
-    // const updatedAnswersCount = update(this.state.answersCount, {
-    //   [answer]: {$apply: (currentValue) => currentValue + 1}
-    // });
     this.setState((state,props) => ({
       answersCount: {
         ...state.answersCount,
@@ -45,6 +53,7 @@ class App extends React.Component {
     }));
   }
 
+// once user selects answer, the result is recorded and determines if next question is rendered or if results need to be displayed
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
 
@@ -55,6 +64,7 @@ class App extends React.Component {
       }
   }
 
+//renders next question
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
@@ -67,6 +77,7 @@ class App extends React.Component {
     });
   }
 
+// calculates which (A,B or C) has most
   getResults() {
     const answersCount = this.state.answersCount;
     const answersCountKeys = Object.keys(answersCount);
@@ -75,6 +86,7 @@ class App extends React.Component {
     return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
   }
 
+//returns results?
   setResults (result) {
     if (result.length === 1) {
       this.setState({ result: result[0] });

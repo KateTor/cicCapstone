@@ -30,7 +30,10 @@ class SignUp extends React.Component {
             <Input type="checkbox" /> I want to receive updates when a dog becomes available that matches my results.
           </Label>
         </FormGroup>
+        <Button>Submit</Button>
       </Form>
     )
   }
 }
+
+export default SignUp

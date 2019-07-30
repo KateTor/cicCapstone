@@ -208,7 +208,7 @@ const quizQuestions =
         },
 
         {
-            question: "If you found a briefcase of money on the street would you keep it?",
+            question: "If you found a briefcase of money on the street what would you do?",
 
             answers: [
                 {
@@ -222,7 +222,7 @@ const quizQuestions =
                 
                 {
                     type: "C",
-                    content: "A briefcase full of money...sound like bad news to me. Just leave it along"
+                    content: "A briefcase full of money...sounds like bad news to me. Just leave it alone"
                 }
             ],
 

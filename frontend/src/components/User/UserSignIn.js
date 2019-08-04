@@ -1,10 +1,21 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-class SignIn extends React.Component {
+class UserSignIn extends React.Component {
+    signIn = (event) => {
+        //submit form and confirm user in database
+
+        //if user doesn't exist, alert to create account
+
+        //if user exists but credentials don't work alert, log in incorrect
+
+        //if correct send user to their home page
+        this.props.history.push(`/useraccount`)
+    }
+
     render() {
         return(
-            <Form>
+            <Form onSubmit={this.signIn}>
                 <FormGroup>
                     <Label for="email" hidden>Email</Label>
                     <Input type="email" name="email" id="email" placeholder="Email"></Input>
@@ -13,10 +24,10 @@ class SignIn extends React.Component {
                     <Label for="password" hidden>Password</Label>
                     <Input type="password" name="password" id="password" placeholder="Password"></Input>
                 </FormGroup>
-                <Button>Sign In</Button>
+                <Button>Log In</Button>
             </Form>
         )
     }
 }
 
-export default SignIn
+export default UserSignIn;

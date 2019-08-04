@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import quizQuestions from '../api/quizQuestions';
-import Quiz from './components/Quiz';
+import Quiz from './Quiz/Quiz';
 import Result from './Result';
 
 //sets initial state

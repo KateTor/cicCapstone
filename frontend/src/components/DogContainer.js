@@ -15,12 +15,6 @@ function DogContainer(props) {
                 </Col>
             </Row>
             <h5>Shelter Information</h5>
-            <Button>
-                Contact Shelter
-            </Button>
-            <Button>
-                Sign Up For Updates
-            </Button>
         </Container>
     )
 }

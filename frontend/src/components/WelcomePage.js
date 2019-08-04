@@ -6,22 +6,17 @@ class WelcomePage extends React.Component {
         this.props.history.push(`/quiz`);
     }
 
-    userLogin = (event) => {
-        this.props.history.push(`/userlogin`);
-    }
-
-    shelterLogin = (event) => {
-        this.props.history.push(`/`)
-    }
-
     render() {
         return (
             <div>
                 <h1>Logo</h1>
-                <Button
-                    onClick={this.takeQuiz}>Take the Quiz</Button>
-                <span><a onClick={this.userLogin}>User</a></span>
-                <span><a onClick={this.shelterLogin}>Shelter</a></span>
+                <button
+                    onClick={this.takeQuiz}>Take the Quiz
+                </button>
+                <div>
+                    <a href="/user">User</a>
+                    <a href="/shelter">Shelter</a>
+                </div>
             </div>
         )
     }

@@ -39,4 +39,4 @@ class ShelterForm extends React.Component {
   }
 }
 
-export default ShelterForm
+export default ShelterForm;

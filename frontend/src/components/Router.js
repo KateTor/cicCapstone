@@ -6,11 +6,12 @@ import App from './App';
 import ShelterForm from './Shelter/ShelterForm';
 import ShelterHomepage from './Shelter/ShelterHomepage';
 import ShelterSignUp from './Shelter/ShelterSignUp';
+import ShelterLogIn from './Shelter/ShelterLogIn';
 import UserHomepage from './User/UserHomepage';
 import UserSignIn from './User/UserSignIn';
 import UserSignUp from './User/UserSignUp';
-import LoginChoice from './User/UserLogInChoice';
-import ShelterLoginChoice from './Shelter/ShelterLoginChoice';
+import UserChoice from './User/UserChoice';
+import ShelterChoice from './Shelter/ShelterChoice';
 
 const Router = () => (
     <BrowserRouter>
@@ -20,11 +21,12 @@ const Router = () => (
             <Route path="/shelterform" component={ShelterForm} />
             <Route path="/shelteraccount" component={ShelterHomepage} />
             <Route path="/sheltercreateaccount" component={ShelterSignUp} />
-            <Route path="/shelterlogin" component={ShelterLoginChoice} />
+            <Route path="/sheltersignin" component={ShelterLogIn} />
+            <Route path="/shelter" component={ShelterChoice} />
             <Route path="/useraccount" component={UserHomepage} />
             <Route path="/usersignin" component={UserSignIn} />
             <Route path="/createaccount" component={UserSignUp} />
-            <Route path="/userlogin" component={LoginChoice} />
+            <Route path="/user" component={UserChoice} />
         </Switch>
     </BrowserRouter>
 )

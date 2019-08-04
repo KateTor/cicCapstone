@@ -3,18 +3,34 @@ import React from 'react';
 import DogContainer from './DogContainer';
  
 
-function Result(props) {
-  return (
-      <div className = 'container'>
-      <div>
-          <h2>Result</h2>
-          <DogContainer />
-      </div>
-      <div>
-          {props.quizResult}
-      </div>  
-      </div> 
-  );
+class Result extends React.Component {
+    // userSignUp = (event) => {
+    //     this.props.history.push(`/createaccount`)
+    // }
+
+    // contactShelter = (event) => {
+    //     //get shelter's contact info from database and send user to that website
+
+    // }
+    render() {
+        return (
+            <div className = 'container'>
+                <div>
+                    <h2>Result</h2>
+                    <DogContainer />
+                </div>
+                <div>
+                    {this.props.quizResult}
+                </div>  
+                <button onClick={this.contactShelter}>
+                    Contact Shelter
+                </button>
+                <button onClick={this.userSignUp}>
+                    Sign Up
+                </button>
+            </div> 
+        );
+    }
 }
 
 // Result.propTypes = {

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import quizQuestions from './api/quizQuestions';
+import quizQuestions from '../api/quizQuestions';
 import Quiz from './components/Quiz';
-import Result from './components/Result';
+import Result from './Result';
 
 //sets initial state
 class App extends React.Component {

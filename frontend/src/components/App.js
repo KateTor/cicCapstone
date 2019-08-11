@@ -116,9 +116,9 @@ renderQuiz() {
   }
   render() {
     return (
-        <div className="App">
+        <div className="container">
           <div>
-            <h2>Pup Ups</h2>
+            <h1 className="logo">Pup Ups</h1>
           </div>
           {this.state.result ? this.renderResult() : this.renderQuiz()}
         </div>

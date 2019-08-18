@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
+
 const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+
 const cors = require("cors");
 app.use(cors());
 
 const models = require("./models")();
 models.init();
-
-app.use(bodyParser.json());
 
 // app.get("/", (req,res) => {
 //     res.send(__dirname + App.js);

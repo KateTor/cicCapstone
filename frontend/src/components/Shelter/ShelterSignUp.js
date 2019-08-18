@@ -7,8 +7,8 @@ function ShelterSignUp() {
       <h1 className="logo">Pup Ups</h1>
       <Form>
           <FormGroup>
-            <Label for="shelterName" hidden>Organization's Name</Label>
-            <Input type="text" name="shelterName" id="shelterName" placeholder="Organization's Name"></Input>
+            <Label for="organizationName" hidden>Organization's Name</Label>
+            <Input type="text" name="organizationName" id="organizationName" placeholder="Organization's Name"></Input>
           </FormGroup>
           <Row>
             <Col>

@@ -77,7 +77,7 @@ class App extends React.Component {
     });
   }
 
-// calculates which (A,B or C) has most
+//gets the keys and iterates over to see which has most
   getResults() {
     const answersCount = this.state.answersCount;
     const answersCountKeys = Object.keys(answersCount);
@@ -86,7 +86,7 @@ class App extends React.Component {
     return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
   }
 
-//returns results?
+//calculates which result A, B, or C
   setResults (result) {
     if (result.length === 1) {
       this.setState({ result: result[0] });
@@ -110,8 +110,8 @@ renderQuiz() {
   }
   renderResult() {
     return (
+      // will I need to change this quizResult prop? or is it needed to pass it to the results page?
       <Result quizResult={this.state.result} />
-      // will this have to become fetch requests, post answers for user & get results
     );
   }
   render() {

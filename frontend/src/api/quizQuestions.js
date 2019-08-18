@@ -227,6 +227,27 @@ const quizQuestions =
             ],
 
             questionId: "10"
+        },
+
+        {
+            question: "",
+            
+            answers: [
+                {
+                    type: "A",
+                    content: ""
+                },
+                {
+                    type: "B",
+                    content: ""
+                },
+                {
+                    type: "C",
+                    content: ""
+                }
+            ],
+
+            questionId: ""
         }
     ];
 

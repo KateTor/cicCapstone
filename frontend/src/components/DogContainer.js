@@ -14,7 +14,12 @@ function DogContainer(props) {
                     <p>Description</p>
                 </Col>
             </Row>
-            <h5>Shelter Information</h5>
+            <div className="organizationInfo">
+                <h5>Organization's Name</h5>
+                <a>Organization's Website</a>
+                <h6>Organization's Address</h6>
+                <h6>Organization's Phone Number</h6>
+            </div>
         </Container>
     )
 }

@@ -13,7 +13,7 @@ class WelcomePage extends React.Component {
                 </div>
                 <footer className="welcomeFooter">
                     <div className="welcomeFooterContainer">
-                        <Link to="/shelter" className="footerLink">Shelter Log In</Link>
+                        <Link to="/shelter" className="footerLink">Organization's Log In</Link>
                         <Link to="/user" className="footerLink">Log In</Link>
                     </div>
                 </footer>

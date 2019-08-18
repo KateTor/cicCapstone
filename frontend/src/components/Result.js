@@ -1,37 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import DogContainer from './DogContainer';
+import { Link } from 'react-router-dom';
  
 
-class Result extends React.Component {
-    // userSignUp = (event) => {
-    //     this.props.history.push(`/createaccount`)
-    // }
+function Result() {
+    const [result, setResult] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:3000/dogs:`${this.props.quizResult}`')
+            .then(response => response.json())
+            .then(json => setResult(json));
+    }, [])
 
-    // contactShelter = (event) => {
-    //     //get shelter's contact info from database and send user to that website
-
-    // }
-    render() {
         return (
             <div className = 'container'>
-                <div>
-                    <h2>Result</h2>
+                <div className="resultsContainer">
+                    <h2>You've got a match!</h2>
                     <DogContainer />
                 </div>
-                <div>
+                {/* <div>
                     {this.props.quizResult}
-                </div>  
-                <button onClick={this.contactShelter}>
+                </div>   */}
+                <button className="button" onClick={this.contactShelter}>
                     Contact Shelter
                 </button>
-                <button onClick={this.userSignUp}>
-                    Sign Up
+                <button className="button">
+                    <Link to="/createaccount">
+                        Sign Up For Updates
+                    </Link>
                 </button>
             </div> 
         );
-    }
 }
+
 
 // Result.propTypes = {
 //   quizResult: PropTypes.string.isRequired

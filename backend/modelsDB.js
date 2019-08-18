@@ -13,7 +13,6 @@ const Dog = db.define('dog', {
 });
 
 const Trait = db.define('trait', {
-  name: { type: Sequelize.STRING, allowNull: false},
   trait_id: { type: Sequelize.INTEGER, allowNull: false },
   user_id: {
       type: Sequelize.INTEGER,

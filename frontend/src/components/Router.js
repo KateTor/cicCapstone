@@ -9,6 +9,8 @@ import ShelterLogIn from './Shelter/ShelterLogIn';
 import UserHomepage from './User/UserHomepage';
 import UserLogIn from './User/UserLogIn';
 import UserSignUp from './User/UserSignUp';
+import DogContainer from './DogContainer';
+import AddDogForm from './Shelter/AddDogForm';
 
 
 const Router = () => (
@@ -20,10 +22,13 @@ const Router = () => (
             <Route path="/shelteraccount" component={ShelterHomepage} />
             <Route path="/sheltercreateaccount" component={ShelterSignUp} />
             <Route path="/shelter" component={ShelterLogIn} />
+            <Route path="/newdog" component={AddDogForm} />
 
             <Route path="/useraccount" component={UserHomepage} />
             <Route path="/user" component={UserLogIn} />
             <Route path="/createaccount" component={UserSignUp} />
+
+            <Route path="/dogcontainer" component={DogContainer} />
         </Switch>
     </BrowserRouter>
 )
